@@ -1,0 +1,241 @@
+body{
+    margin: 0;
+    height:100vw;
+    width: 100vh;
+}
+.header{
+    background-color:#000066;
+    color: beige;
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.limit{
+    display: flex;
+    align-items: center;
+}
+.limit input{
+    width:50vw;
+}
+.Rvalue{
+    font-size: larger;
+    color: black;
+}
+/*--------Start of Card styling------- */
+main{
+    background: linear-gradient(to bottom left, #cc00cc 0%, #0000ff 100%);
+    width: 100vw;
+    height: 70vh;
+}
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card{
+
+    margin:30px 0px 0px 0px;
+}
+
+#card1,#card2,#card3 {
+    background-color: transparent;
+    width: 250px;
+    height: 300px;
+    perspective: 1000px;
+  }
+  
+  .innerCard1 ,.innerCard2 ,.innerCard3 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 2s;
+    transition-timing-function: cubic-bezier(0, 2, 1, -0.68);
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .is-fliped{
+    transform: rotateY(360deg);
+  }
+  
+  .front_card1,.front_card2,.front_card3, .back_card1,.back_card2,.back_card3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .front_card1, .front_card2,.front_card3{
+    background-image: url(img/images.jfif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+  }
+  
+  .back_card1,.back_card2,.back_card3 {
+    background-color:#000066;
+    color: white;
+    transform: rotateY(180deg);
+  }
+/*--------End of Card styling------- */
+.inputbox input{
+    display: block;
+    margin: auto;
+    width: 20vw;
+    height: 5vw;
+    font-size: 45px;
+    align-items: center;
+    border:solid 5px black;
+    border-radius: 100px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+
+/*-------Start of button styling------ */
+.button{
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.button button{
+    display:block;
+    margin:auto;
+    width:10vw;
+    height: 5vh;
+    padding: 2px;
+    font-size: large;
+    border-radius: 20px;
+
+}
+#button1{
+    background-color: orange;
+}
+#button1:hover{
+    background-color:rgb(214, 140, 2) ;
+}
+#button2{
+    background-color: rgb(36, 244, 36)
+}
+#button2:hover{
+    background-color: rgb(28, 193, 28)
+}
+#button3{
+    background-color: rgb(244, 36, 36)
+}
+#button3:hover{
+    background-color: rgb(210, 26, 26)
+}
+
+/*-----End of button styling -----*/
+.footer{
+    background-color:#01012e;
+    color: beige;
+    width: 100vw;
+    height: 10vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    word-spacing: 8px;
+}
+
+
+
+
+/* media quary making webpage responsive */
+@media (max-width:900px){
+    body{
+        width:100vw;
+        height:100vh;
+    }
+    .footer{
+        width: 100vw;
+        height: 10vh;
+    }
+#button3{
+    font-size: medium;
+}
+
+}
+@media (max-width:750px){
+    body{
+        width:100vw;
+        height:100vh;
+    }
+
+
+    .header{
+        height:15vh;
+        font-size: medium;
+    }
+
+  
+
+    #card1,#card3 {
+        display:none;
+    }
+    /* flipping the card dobara */
+    .is2-fliped{
+        transform: rotateY(360deg);
+      }
+
+#button3{
+    font-size: small;
+}
+.inputbox input{
+    width: 200px;
+    height: 50px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#button1,#button2,#button3{
+    width: 100px;
+}
+
+.footer{
+    width: 100vw;
+    height: 15vh;
+}
+}
+@media(max-width:600px){
+    body{
+        width: 100vw;
+        height:auto;
+    }
+    #card2{
+         width: 280px;
+         height: 350px;
+    }
+    .inputbox input{
+        width: 200px;
+        height: 50px;
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #button1,#button2,#button3{
+        width: 100px;
+    }
+
+    .footer{
+        font-size: large;
+        text-align: justify;
+    }
+
+    
+}
